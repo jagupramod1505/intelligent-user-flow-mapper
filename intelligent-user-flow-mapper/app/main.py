@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
-from crawler import crawl_site
-from flow_analyzer import build_user_flow
+from app.site_crawler import crawl_site
+from app.noise_filter import remove_global_links
 
 app = FastAPI()
 
